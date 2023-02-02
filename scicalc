@@ -36,12 +36,12 @@ def add(*args):
 	return sum
 
 def mul(*args):
-	"""multiplies a list of numbers"""
+	"""Multiply a list of numbers"""
 
-	product = 1.0
+	prod = 1.0
 	for arg in args:
-		product = product * arg
-	return product
+		prod *= arg
+	return prod
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
