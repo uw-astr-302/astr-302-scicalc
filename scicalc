@@ -42,8 +42,7 @@ def log10(x):
 
 def dec_to_frac(x):
 	"""Return a fraction representation of the decimal"""
-	
-	# check if number	# if not throw exception
+    
 	# Find the number of decimal places
 	dp = len(str(x).split(".")[1]) 
 	# check how many decimal places
@@ -57,13 +56,6 @@ def dec_to_frac(x):
 	numerator /= greatest_factor
 	frac = str(int(numerator)) + "/" + str(int(denominator))
 	return frac 
-
-def to_float(num):
-	try:
-		float(num)			
-		return float(num)
-	except ValueError:
-		print("Oops!  That was no valid number.  Try again...")
 
 #
 # The dictionary that maps the command-line name of the operation,
