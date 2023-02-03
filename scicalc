@@ -35,6 +35,14 @@ def add(*args):
 		sum += arg
 	return sum
 
+def mul(*args):
+	"""Multiply a list of numbers"""
+
+	prod = 1.0
+	for arg in args:
+		prod *= arg
+	return prod
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
@@ -73,6 +81,7 @@ def to_float(num):
 operators = {
 	'add': add,
 	'sum': add,
+	'mul': mul,
 	'log10': log10,
 	'dec_to_frac': dec_to_frac
 }
