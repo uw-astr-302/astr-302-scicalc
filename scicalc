@@ -48,6 +48,23 @@ def log10(x):
 	
 	return math.log10(x)
 
+def dec_to_frac(x):
+	"""Return a fraction representation of the decimal"""
+    
+	# Find the number of decimal places
+	dp = len(str(x).split(".")[1]) 
+	# check how many decimal places
+	# denominator set as how many decimal places there are
+	# find the common factor between the two
+	denominator = 10**int(dp)
+	numerator = x*denominator
+	# find the greatest common factor
+	greatest_factor = math.gcd(int(denominator), int(numerator))
+	denominator /= greatest_factor
+	numerator /= greatest_factor
+	frac = str(int(numerator)) + "/" + str(int(denominator))
+	return frac 
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -58,6 +75,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'dec_to_frac': dec_to_frac
 }
 
 if __name__ == "__main__":
