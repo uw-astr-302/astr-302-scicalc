@@ -48,6 +48,19 @@ def log10(x):
 	
 	return math.log10(x)
 
+def fact(x):
+	"""Return the factorial of a positive integer x"""
+	#
+	# math.factorial has deprecated the use of floats, so in order
+	# to prevent a deprecation warning integer equivalent floats
+	# are converted to integers while non integer floats are
+	# passed through to produce ValueError exceptions.
+	#
+	if x.is_integer():
+		return math.factorial(int(x))
+	else:
+		return math.factorial(x)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -58,6 +71,9 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'fact': fact,
+	'factorial': fact,
+	'!': fact,
 }
 
 if __name__ == "__main__":
