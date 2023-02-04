@@ -50,8 +50,7 @@ def log10(x):
 
 def power(x,y):
 	"""Return the x raised to the power of y"""
-
-
+	
 	return math.pow(x,y)
 #
 # The dictionary that maps the command-line name of the operation,
