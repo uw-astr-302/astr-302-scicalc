@@ -47,6 +47,11 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+    
+def exp(x):
+	"""Return a base-e exponent to the xth power"""
+	
+	return math.exp(x)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -58,6 +63,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+    'exp': exp,
 }
 
 if __name__ == "__main__":
