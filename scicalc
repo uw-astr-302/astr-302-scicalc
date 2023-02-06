@@ -69,8 +69,8 @@ operators = {
 	'mul': mul,
 	'log10': log10,
     	'npr': npr,
-    	'perm' npr,
-    	'cpr': cpr,
+    	'perm': npr,
+	'cpr': cpr,
     	'comb': cpr,
 }
 
