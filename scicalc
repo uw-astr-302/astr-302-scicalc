@@ -48,6 +48,16 @@ def log10(x):
 	
 	return math.log10(x)
 
+def npr(n,x):
+	"""Return the number of permutations of x items out of n items"""
+	
+	return math.perm(n,x)
+
+def cpr(n,x):
+	"""Return the number of combinations of x items out of n items"""
+	
+	return math.comb(n,x)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -58,6 +68,10 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+    	'npr': npr,
+    	'perm': npr,
+	'cpr': cpr,
+    	'comb': cpr,
 }
 
 if __name__ == "__main__":
