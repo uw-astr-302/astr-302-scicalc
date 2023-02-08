@@ -3,7 +3,10 @@
 # A simple command-line scientific calculator.
 #
 
+#Cosine(x)# 
 import sys, math
+import numpy as np
+
 
 def die_with_usage(message):
 	print("\n****\n**** error: {}\n****\n".format(message), file=sys.stderr)
@@ -13,6 +16,11 @@ def die_with_usage(message):
 		print("    {}: {}".format(op, func.__doc__), file=sys.stderr)
 	print("", file=sys.stderr)
 	exit(-1)
+
+def cos(x):
+    """Return the value of cos(x)"""
+    return np.cos(x)
+
 
 #
 # The operators.
@@ -58,6 +66,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+    'cos': cos,
 }
 
 if __name__ == "__main__":
