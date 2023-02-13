@@ -4,6 +4,7 @@
 #
 
 import sys, math
+import numpy as np
 
 def die_with_usage(message):
 	print("\n****\n**** error: {}\n****\n".format(message), file=sys.stderr)
@@ -39,6 +40,10 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+    
+def sin(x):
+    """Return the sine of an angle in radians"""
+    return np.sin(x)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -49,6 +54,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+    'sin': sin,
 }
 
 if __name__ == "__main__":
