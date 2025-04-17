@@ -1,0 +1,11 @@
+def sqrt(*args):
+	"""Return the square roots of the given numbers"""
+	if not args:
+		raise TypeError("sqrt() requires at least one argument.")
+	results = []
+	for x in args:
+		if x < 0:
+			raise ValueError("Cannot compute square root of negative number: {}".format(x))
+		results.append(math.sqrt(x))
+	return results if len(results) > 1 else results[0]
+
