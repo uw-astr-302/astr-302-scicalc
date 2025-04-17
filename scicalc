@@ -35,6 +35,13 @@ def add(*args):
 		sum += arg
 	return sum
 
+def sub(*args):
+	"""Subtracts everything after the first number from the first number"""
+	result = args[0]
+	for arg in args[1:]:
+		result -= arg
+	return result
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
